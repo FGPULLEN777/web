@@ -28,6 +28,8 @@ class PermissionsModal {
       $scope.dismiss();
     }
 
+    console.log($scope.permissions);
+
     $scope.formattedPermissions = $scope.permissions.map(function(permission){
       if(permission.name === "stream-items") {
         var title = "Access to ";
@@ -63,6 +65,8 @@ class PermissionsModal {
         return "Access to " + mapping[$scope.component.area];
       }
     })
+
+    console.log($scope.formattedPermissions);
   }
 
 }
