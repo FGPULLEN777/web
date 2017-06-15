@@ -357,6 +357,8 @@ class ComponentManager {
     if(!existingDialog) {
       var el = this.$compile( "<permissions-modal component='component' permissions='permissions' callback='callback' class='permissions-modal'></permissions-modal>" )(scope);
       angular.element(document.body).append(el);
+    } else {
+      console.log("Existing dialog, not presenting.");
     }
   }
 

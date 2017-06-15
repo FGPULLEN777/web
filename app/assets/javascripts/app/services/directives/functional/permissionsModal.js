@@ -12,7 +12,6 @@ class PermissionsModal {
   }
 
   link($scope, el, attrs) {
-    'ngInject';
 
     $scope.dismiss = function() {
       el.remove();
@@ -27,8 +26,6 @@ class PermissionsModal {
       $scope.callback(false);
       $scope.dismiss();
     }
-
-    console.log($scope.permissions);
 
     $scope.formattedPermissions = $scope.permissions.map(function(permission){
       if(permission.name === "stream-items") {
@@ -65,8 +62,6 @@ class PermissionsModal {
         return "Access to " + mapping[$scope.component.area];
       }
     })
-
-    console.log($scope.formattedPermissions);
   }
 
 }

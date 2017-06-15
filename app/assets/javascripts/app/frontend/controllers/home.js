@@ -1,8 +1,6 @@
 angular.module('app.frontend')
 .controller('HomeCtrl', function ($scope, $location, $rootScope, $timeout, modelManager, syncManager, authManager, themeManager) {
 
-  console.log("Home Loaded");
-
     function urlParam(key) {
       return $location.search()[key];
     }
